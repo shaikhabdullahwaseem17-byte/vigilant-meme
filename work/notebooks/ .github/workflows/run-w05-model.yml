@@ -1,0 +1,50 @@
+name: Execute W05 model notebook
+
+on:
+  push:
+    paths:
+      - 'work/notebooks/w05_model.ipynb'
+      - 'scripts/**'
+      - 'data/raw/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install nbformat jupyter nbconvert
+
+      - name: Prepare features (repo script)
+        run: |
+          python scripts/01_prepare_features.py
+
+      - name: Execute notebook (nbconvert)
+        run: |
+          jupyter nbconvert --to notebook --execute work/notebooks/w05_model.ipynb \
+            --ExecutePreprocessor.timeout=2400 \
+            --output work/notebooks/w05_model_executed.ipynb
+
+      - name: Commit executed notebook and artifacts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add work/notebooks/w05_model_executed.ipynb data/processed/refresh_feature_vector.csv || true
+          git commit -m "ci: execute w05_model notebook with outputs" || echo "no changes to commit"
+          git push
