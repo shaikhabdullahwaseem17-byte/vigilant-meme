@@ -104,7 +104,7 @@ python scripts/run_all.py
 ## References:
 
 Starter Dataset &
-Opportunity from : Flyrank.ai
+Opportunity from :   Flyrank.ai
 
 Credits and love to: Flyrank.ai 
 
@@ -115,7 +115,6 @@ work/notebooks/capstone.ipynb
 
 
 
-##          ---END---
 
 [last updated: 10/22/2026]
 
