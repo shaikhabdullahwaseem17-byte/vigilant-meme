@@ -101,12 +101,21 @@ pip install -r requirements.txt
 python scripts/run_all.py
 ```
 
+## References:
 
 Starter Dataset &
 Opportunity from : Flyrank.ai
 
 Credits and love to: Flyrank.ai 
 
+
+## Final Deliverable: 
+
+work/notebooks/capstone.ipynb
+
+
+
+##          ---END---
 
 [last updated: 10/22/2026]
 
