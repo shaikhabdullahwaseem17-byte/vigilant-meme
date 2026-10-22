@@ -1,6 +1,8 @@
 # Detecting Content Decline
 
-This project is my capstone: trying to catch content that is quietly going off the rails before it turns into a full-blown traffic problem.
+This project is the capstone and full walk-through of my Flyrank.ai ML engineering internship: 
+
+
 
 The basic idea is simple enough to explain in one sentence:
 
@@ -16,7 +18,7 @@ That is the core of the project: not just building a model, but building one tha
 
 ## Why this project
 
-Most content does not die instantly. It fades. It gets stale. It loses engagement. It stops earning attention. By the time the numbers look ugly, the damage is already done.
+Most content does not die instantly. It fades. It loses engagement. It stops earning attention. By the time the numbers look ugly, you can already smell the spilled milk. (spilled milk have a smell right?)
 
 So the real question is not just, “can we predict decline?” It is:
 
@@ -28,15 +30,13 @@ That is the core of this project.
 
 ## What this project is trying to do
 
-This project asks a practical question: can we identify content that is likely to decline before it becomes obviously bad?
+This project asks a practical question: can we identify content that is likely to decline before it becomes obviously.. stale?
 
 That is a real decision-support problem. It is also one of those problems where a simple baseline can be useful, a learned model can be better, and honest evaluation matters more than dramatic claims.
 
 It is not magic. It is not pretending to know the future. It is a structured attempt to find a signal in messy data and then be honest about what the signal does and does not mean.
 
 ## What is in this repo
-
-This repo is not a tutorial scaffold. It is the actual project workspace.
 
 - `notebooks/` — exploratory and modeling notebooks
 - `scripts/` — feature engineering, model training, evaluation, and report generation
@@ -86,16 +86,11 @@ There is a real difference between “a model that looks impressive” and “a 
 
 ## Project structure
 
-A lot of repos look like they were built to impress a stranger on the internet. This one was built to do actual work.
-
-The important parts are the ones that matter:
-
 - `scripts/` for the actual pipeline
 - `notebooks/` for experiment flow and analysis
 - `work/` for capstone work and reporting
 - `outputs/` for generated results and artifacts
 
-That is the substance. The rest is just scaffolding, and the scaffolding has been cleaned up.
 
 ## Running it
 
@@ -106,22 +101,12 @@ pip install -r requirements.txt
 python scripts/run_all.py
 ```
 
-This repo is meant to be run as an analytical project, not just admired from a distance. The scripts and notebooks are the real output here.
 
-## Tiny note on the repo state
+Starter Dataset &
+Opportunity from : Flyrank.ai
 
-This is a capstone-style project repo, not a tutorial starter repo. The original internship guidance files were cleaned up so the public-facing story reads like a project that was actually built, not a training kit handed out with a hundred little instructions.
+Credits and love to: Flyrank.ai 
 
-That is the difference between a repo that looks like a real project and one that looks like a syllabus in a folder.
 
-## Final word
+[last updated: 10/22/2026]
 
-This project is about building a useful signal in a messy real-world setting. It is not pretending to be a grand theory of the universe. It is a grounded ML project with a clear goal, a real dataset, and a genuine evaluation workflow.
-
-And honestly? That is what makes it worth keeping.
-
-It is structured, honest, and practical — the kind of work that reads like thought, not generated filler.
-
----
-
-Built as a practical capstone on content decline detection, with emphasis on signal quality, honest evaluation, and decision support.
