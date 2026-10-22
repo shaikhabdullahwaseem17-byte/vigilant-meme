@@ -103,8 +103,7 @@ python scripts/run_all.py
 
 ## References:
 
-Starter Dataset &
-Opportunity from :   Flyrank.ai
+Starter Dataset On Hugging Face (gated): Flyrank/internship-warehouse
 
 Credits and love to: Flyrank.ai 
 
