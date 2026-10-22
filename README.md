@@ -101,7 +101,7 @@ pip install -r requirements.txt
 python scripts/run_all.py
 ```
 
-# What the Anonymized Dataset had: 
+## What the Anonymized Dataset had: 
 
 data/raw/content_refresh_anonymized.csv — 30,000 rows × 44 columns, one row per pseudonymized content item, 32 clients, trailing-90-day metrics.
 
