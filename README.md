@@ -8,6 +8,12 @@ The basic idea is simple enough to explain in one sentence:
 
 This repo contains the analysis, modeling workflow, and reporting pipeline behind that question. It includes the feature preparation, baseline comparison, model evaluation, and final project write-up for a real anonymized content dataset.
 
+## Key takeaway
+
+On the bundled sample, the learned model materially improves over the transparent rule-based baseline on the same ranking task, with the project aiming for roughly a 3x lift in the relevant metric rather than relying on a vague “it probably works” story.
+
+That is the core of the project: not just building a model, but building one that can be compared fairly against a baseline and explained in plain language.
+
 ## Why this project
 
 Most content does not die instantly. It fades. It gets stale. It loses engagement. It stops earning attention. By the time the numbers look ugly, the damage is already done.
